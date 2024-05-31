@@ -1,0 +1,70 @@
+body {
+    background-color: #1e1e1e; /* Cor de fundo escura */
+    color: #ffffff; /* Cor do texto */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px; /* Aumentei um pouco para acomodar os cartões */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333; /* Cor de fundo do contêiner */
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+h1 {
+    color: #ffa500; /* Cor laranja para o título */
+    text-align: center; /* Centralizar o título */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    font-size: 32px; /* Tamanho da fonte */
+}
+
+.card {
+    width: calc(25% - 20px); /* Define a largura de cada cartão */
+    margin: 40px 10px; /* Espaçamento horizontal entre os cartões e do topo e fundo */
+    float: left; /* Alinha os cartões lado a lado */
+    background-color: #333; /* Cor de fundo do cartão */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Adiciona a borda ao tamanho total do elemento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.card img {
+    width: 100%; /* Imagem ocupando toda a largura do cartão */
+    border-radius: 5px; /* Cantos arredondados da imagem */
+}
+
+.card-title {
+    color: #ffa500; /* Cor laranja para o título do cartão */
+    font-size: 20px; /* Tamanho da fonte do título */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+.card-text {
+    color: #ffffff; /* Cor do texto do cartão */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+.card-button {
+    display: block; /* Torna o botão um bloco para ocupar toda a largura */
+    margin-top: 20px; /* Espaçamento superior */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #ffa500; /* Cor de fundo do botão */
+    color: #1e1e1e; /* Cor do texto do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    text-align: center; /* Centralizar texto */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor do mouse */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.card-button:hover {
+    background-color: #ffa500; /* Cor de fundo ao passar o mouse */
+    color: #1e1e1e; /* Cor do texto ao passar o mouse */
+}

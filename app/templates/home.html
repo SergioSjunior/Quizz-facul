@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Seu Aplicativo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Pense &#10067;</h1>
+        
+        <!-- Menu de Navegação -->
+        <nav>
+            <ul>
+                <li>
+                    <!-- Botão Iniciar um Novo Quiz com opção de temas -->
+                    <div class="start-quiz">
+                        <button onclick="startQuiz()">
+                            Iniciar um Novo Quiz <span>&#9881;</span>
+                        </button>
+                    </div>
+                </li>
+                <li><a href="#" class="create-quiz">Criar um Novo Quiz</a></li>
+                <li><a href="#" class="profile-settings">Configurações de Perfil</a></li>
+                <li><a href="#" onclick="returnToLogin()" class="logout">Sair</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Seção de Últimos Resultados do Quiz -->
+        <section id="last-results">
+            <h2>Últimos Resultados do Quiz</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Pontuação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-05-12</td>
+                        <td>80%</td>
+                    </tr>
+                    <tr>
+                        <td>2024-05-10</td>
+                        <td>60%</td>
+                    </tr>
+                    <tr>
+                        <td>2024-05-08</td>
+                        <td>75%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+    </div>
+
+    <script>
+        // Função para iniciar o quiz com o tema selecionado
+        function startQuiz() {
+            window.location.href = "{{ url_for('start_quiz') }}";
+        }
+
+        // Função para retornar para a tela de login
+        function returnToLogin() {
+            // Redirecionar para a tela de login
+            window.location.href = "{{ url_for('login') }}";
+        }
+    </script>
+</body>
+</html>

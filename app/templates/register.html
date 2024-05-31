@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Seu Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro</h1>
+        <form action="{{ url_for('register') }}" method="post">
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirm_password">Confirmar Senha:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            <button type="submit">Registrar</button>
+        </form>
+        <p>Já tem uma conta? <a href="{{ url_for('login') }}">Faça login aqui</a></p>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
